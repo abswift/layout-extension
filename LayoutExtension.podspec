@@ -18,17 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+LayoutExtension simplifies code related to auto layout in Swift.
                        DESC
 
-  s.homepage         = 'https://github.com/Ariel Bogdziewicz/LayoutExtension'
+  s.homepage         = 'https://github.com/abswift/layout-extension'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Ariel Bogdziewicz' => 'ariel.bogdziewicz@gmail.com' }
-  s.source           = { :git => 'https://github.com/Ariel Bogdziewicz/LayoutExtension.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/abswift/layout-extension.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'LayoutExtension/Classes/**/*'
   
