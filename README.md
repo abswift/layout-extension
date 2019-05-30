@@ -1,6 +1,6 @@
 # LayoutExtension
 
-[![CI Status](https://img.shields.io/travis/Ariel Bogdziewicz/LayoutExtension.svg?style=flat)](https://travis-ci.org/Ariel Bogdziewicz/LayoutExtension)
+[![Build Status](https://travis-ci.org/abswift/layout-extension.svg?branch=master)](https://travis-ci.org/abswift/layout-extension)
 [![Version](https://img.shields.io/cocoapods/v/LayoutExtension.svg?style=flat)](https://cocoapods.org/pods/LayoutExtension)
 [![License](https://img.shields.io/cocoapods/l/LayoutExtension.svg?style=flat)](https://cocoapods.org/pods/LayoutExtension)
 [![Platform](https://img.shields.io/cocoapods/p/LayoutExtension.svg?style=flat)](https://cocoapods.org/pods/LayoutExtension)
