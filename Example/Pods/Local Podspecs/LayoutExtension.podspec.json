@@ -1,0 +1,22 @@
+{
+  "name": "LayoutExtension",
+  "version": "0.1.0",
+  "summary": "A short description of LayoutExtension.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Ariel Bogdziewicz/LayoutExtension",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Ariel Bogdziewicz": "ariel.bogdziewicz@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Ariel Bogdziewicz/LayoutExtension.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LayoutExtension/Classes/**/*"
+}

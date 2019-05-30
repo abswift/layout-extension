@@ -1,0 +1,6 @@
+framework module LayoutExtension {
+  umbrella header "LayoutExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}

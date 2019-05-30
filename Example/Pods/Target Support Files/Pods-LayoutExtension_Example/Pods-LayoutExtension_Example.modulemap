@@ -1,0 +1,6 @@
+framework module Pods_LayoutExtension_Example {
+  umbrella header "Pods-LayoutExtension_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

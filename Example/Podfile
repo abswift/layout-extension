@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LayoutExtension_Example' do
+  pod 'LayoutExtension', :path => '../'
+
+  target 'LayoutExtension_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
