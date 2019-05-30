@@ -15,7 +15,7 @@
 		6E03EBB585CE1C7DD73ABE5AA5B854DC /* LayoutExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FEA09B37F15BE2FB56AD52356F23F8E8 /* LayoutExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A1DD8D3ABCA2C68F2F615122B724A13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		9CAC8A902ABD77834774BB48BD6F997D /* Pods-LayoutExtension_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9EB2DAD198A21E09A37201E89577AF /* Pods-LayoutExtension_Example-dummy.m */; };
-		B07FCCCE22A020580018AAD1 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07FCCCD22A020580018AAD1 /* UIView+Layout.swift */; };
+		B07FCCD422A025440018AAD1 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07FCCD222A025440018AAD1 /* UIView+Layout.swift */; };
 		F4BE3C2919063D067F4949B3EBAE952A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,7 @@
 		9105A9F9D179B50ABCDE12BCFBA5A470 /* LayoutExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LayoutExtension-Info.plist"; sourceTree = "<group>"; };
 		98031368B759EE8F61E4645C51FF0C0F /* LayoutExtension.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = LayoutExtension.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B07FCCCD22A020580018AAD1 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		B07FCCD222A025440018AAD1 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		B6ACEE798FA0FB5D9803AD8ED852B96C /* LayoutExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LayoutExtension-dummy.m"; sourceTree = "<group>"; };
 		B8E457D2CF42F8EAB8405A730D24E862 /* LayoutExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LayoutExtension.modulemap; sourceTree = "<group>"; };
 		BBD160D29AD8C8A4CE9BC4CB591E996C /* Pods-LayoutExtension_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LayoutExtension_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -142,20 +142,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B07FCCCC22A0201A0018AAD1 /* Classes */ = {
+		B07FCCD022A025440018AAD1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B07FCCCF22A022C10018AAD1 /* Extensions */,
+				B07FCCD222A025440018AAD1 /* UIView+Layout.swift */,
 			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		B07FCCCF22A022C10018AAD1 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				B07FCCCD22A020580018AAD1 /* UIView+Layout.swift */,
-			);
-			path = Extensions;
+			name = Classes;
+			path = LayoutExtension/Classes;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -213,7 +206,7 @@
 		E877028AFBDC6EF74A3DF74289AA801B /* LayoutExtension */ = {
 			isa = PBXGroup;
 			children = (
-				B07FCCCC22A0201A0018AAD1 /* Classes */,
+				B07FCCD022A025440018AAD1 /* Classes */,
 				47EB58604A86FD9FCDEA0A5AC5EE66B1 /* Pod */,
 				53153B250F42295F09701D37C1A1DBC4 /* Support Files */,
 			);
@@ -393,7 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B07FCCCE22A020580018AAD1 /* UIView+Layout.swift in Sources */,
+				B07FCCD422A025440018AAD1 /* UIView+Layout.swift in Sources */,
 				35DA482B9A42A55A16AEA5B1422ABA46 /* LayoutExtension-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
