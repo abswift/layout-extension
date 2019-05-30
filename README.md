@@ -20,6 +20,22 @@ it, simply add the following line to your Podfile:
 pod 'LayoutExtension'
 ```
 
+## Usage
+
+When using the library through [CocoaPods](https://cocoapods.org) then please import the library like follows:
+```swift
+import LayoutExtension
+```
+
+Basic example:
+```swift
+self.view.addSubview(box) { view in
+    view.width(50)
+    view.height(50)
+    view.center()
+}
+```
+
 ## Author
 
 Ariel Bogdziewicz
