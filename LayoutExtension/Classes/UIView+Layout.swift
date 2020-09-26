@@ -88,7 +88,7 @@ public extension UIView {
     // MARK: - Size to anchor
     
     @discardableResult
-    func width(to anchor: NSLayoutDimension, constant: CGFloat = 0.0, multiplier: CGFloat = 1.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+    func width(to anchor: NSLayoutDimension, multiplier: CGFloat = 1.0, constant: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
         let constraint = self.widthAnchor.constraint(equalTo: anchor, multiplier: multiplier, constant: constant)
         constraint.priority = priority
         constraint.isActive = true
@@ -96,7 +96,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func height(to anchor: NSLayoutDimension, constant: CGFloat = 0.0, multiplier: CGFloat = 1.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+    func height(to anchor: NSLayoutDimension, multiplier: CGFloat = 1.0, constant: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
         let constraint = self.heightAnchor.constraint(equalTo: anchor, multiplier: multiplier, constant: constant)
         constraint.priority = priority
         constraint.isActive = true
@@ -106,7 +106,7 @@ public extension UIView {
     // MARK: - Size less than anchor
 
     @discardableResult
-    func widthLess(than anchor: NSLayoutDimension, constant: CGFloat = 0.0, multiplier: CGFloat = 1.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+    func widthLess(than anchor: NSLayoutDimension, multiplier: CGFloat = 1.0, constant: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
         let constraint = self.widthAnchor.constraint(lessThanOrEqualTo: anchor, multiplier: multiplier, constant: constant)
         constraint.priority = priority
         constraint.isActive = true
@@ -114,7 +114,7 @@ public extension UIView {
     }
 
     @discardableResult
-    func heightLess(than anchor: NSLayoutDimension, constant: CGFloat = 0.0, multiplier: CGFloat = 1.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+    func heightLess(than anchor: NSLayoutDimension, multiplier: CGFloat = 1.0, constant: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
         let constraint = self.heightAnchor.constraint(lessThanOrEqualTo: anchor, multiplier: multiplier, constant: constant)
         constraint.priority = priority
         constraint.isActive = true
@@ -124,7 +124,7 @@ public extension UIView {
     // MARK: - Size greater than anchor
 
     @discardableResult
-    func widthGreater(than anchor: NSLayoutDimension, constant: CGFloat = 0.0, multiplier: CGFloat = 1.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+    func widthGreater(than anchor: NSLayoutDimension, multiplier: CGFloat = 1.0, constant: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
         let constraint = self.widthAnchor.constraint(greaterThanOrEqualTo: anchor, multiplier: multiplier, constant: constant)
         constraint.priority = priority
         constraint.isActive = true
@@ -132,7 +132,7 @@ public extension UIView {
     }
 
     @discardableResult
-    func heightGreater(than anchor: NSLayoutDimension, constant: CGFloat = 0.0, multiplier: CGFloat = 1.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+    func heightGreater(than anchor: NSLayoutDimension, multiplier: CGFloat = 1.0, constant: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
         let constraint = self.heightAnchor.constraint(greaterThanOrEqualTo: anchor, multiplier: multiplier, constant: constant)
         constraint.priority = priority
         constraint.isActive = true
@@ -184,6 +184,106 @@ public extension UIView {
     @discardableResult
     func bottom(_ inset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
         let constraint = self.bottomAnchor.constraint(equalTo: self.superview!.bottomAnchor, constant: -inset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    // MARK: - Edge less than parent
+
+    @discardableResult
+    func leadingLess(_ inset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.leadingAnchor.constraint(lessThanOrEqualTo: self.superview!.leadingAnchor, constant: inset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func trailingLess(_ inset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.trailingAnchor.constraint(lessThanOrEqualTo: self.superview!.trailingAnchor, constant: -inset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func leftLess(_ inset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.leftAnchor.constraint(lessThanOrEqualTo: self.superview!.leftAnchor, constant: inset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func topLess(_ inset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.topAnchor.constraint(lessThanOrEqualTo: self.superview!.topAnchor, constant: inset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func rightLess(_ inset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.rightAnchor.constraint(lessThanOrEqualTo: self.superview!.rightAnchor, constant: -inset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func bottomLess(_ inset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.bottomAnchor.constraint(lessThanOrEqualTo: self.superview!.bottomAnchor, constant: -inset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    // MARK: - Edge greater than parent
+
+    @discardableResult
+    func leadingGreater(_ inset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.leadingAnchor.constraint(greaterThanOrEqualTo: self.superview!.leadingAnchor, constant: inset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func trailingGreater(_ inset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.trailingAnchor.constraint(greaterThanOrEqualTo: self.superview!.trailingAnchor, constant: -inset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func leftGreater(_ inset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.leftAnchor.constraint(greaterThanOrEqualTo: self.superview!.leftAnchor, constant: inset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func topGreater(_ inset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.topAnchor.constraint(greaterThanOrEqualTo: self.superview!.topAnchor, constant: inset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func rightGreater(_ inset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.rightAnchor.constraint(greaterThanOrEqualTo: self.superview!.rightAnchor, constant: -inset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func bottomGreater(_ inset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.bottomAnchor.constraint(greaterThanOrEqualTo: self.superview!.bottomAnchor, constant: -inset)
         constraint.priority = priority
         constraint.isActive = true
         return constraint
@@ -370,7 +470,7 @@ public extension UIView {
     }
 
     @discardableResult
-    func left(before view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+    func left(after view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
         let constraint = self.leftAnchor.constraint(equalTo: view.rightAnchor, constant: offset)
         constraint.priority = priority
         constraint.isActive = true
@@ -394,8 +494,108 @@ public extension UIView {
     }
     
     @discardableResult
-    func bottom(after view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+    func bottom(before view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
         let constraint = self.bottomAnchor.constraint(equalTo: view.topAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    // MARK: - Edge less than another view's edge
+
+    @discardableResult
+    func leadingLess(after view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.leadingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func trailingLess(before view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.trailingAnchor.constraint(lessThanOrEqualTo: view.leadingAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func leftLess(after view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.leftAnchor.constraint(lessThanOrEqualTo: view.rightAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func topLess(after view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.topAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func rightLess(before view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.rightAnchor.constraint(lessThanOrEqualTo: view.leftAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func bottomLess(before view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.bottomAnchor.constraint(lessThanOrEqualTo: view.topAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    // MARK: - Edge greater than another view's edge
+
+    @discardableResult
+    func leadingGreater(after view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.leadingAnchor.constraint(greaterThanOrEqualTo: view.trailingAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func trailingGreater(before view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.trailingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func leftGreater(after view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.leftAnchor.constraint(greaterThanOrEqualTo: view.rightAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func topGreater(after view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.topAnchor.constraint(greaterThanOrEqualTo: view.bottomAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func rightGreater(before view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.rightAnchor.constraint(greaterThanOrEqualTo: view.leftAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func bottomGreater(before view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.bottomAnchor.constraint(greaterThanOrEqualTo: view.topAnchor, constant: offset)
         constraint.priority = priority
         constraint.isActive = true
         return constraint
@@ -443,6 +643,100 @@ public extension UIView {
     @discardableResult
     func bottom(to anchor: NSLayoutYAxisAnchor, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
         let constraint = self.bottomAnchor.constraint(equalTo: anchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    // MARK: - Edge less than anchor
+
+    @discardableResult
+    func leadingLess(to anchor: NSLayoutXAxisAnchor, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.leadingAnchor.constraint(lessThanOrEqualTo: anchor, constant: offset)
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func trailingLess(to anchor: NSLayoutXAxisAnchor, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.trailingAnchor.constraint(lessThanOrEqualTo: anchor, constant: offset)
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func leftLess(to anchor: NSLayoutXAxisAnchor, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.leftAnchor.constraint(lessThanOrEqualTo: anchor, constant: offset)
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func topLess(to anchor: NSLayoutYAxisAnchor, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.topAnchor.constraint(lessThanOrEqualTo: anchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func rightLess(to anchor: NSLayoutXAxisAnchor, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.rightAnchor.constraint(lessThanOrEqualTo: anchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func bottomLess(to anchor: NSLayoutYAxisAnchor, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.bottomAnchor.constraint(lessThanOrEqualTo: anchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    // MARK: - Edge greater than anchor
+
+    @discardableResult
+    func leadingGreater(to anchor: NSLayoutXAxisAnchor, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.leadingAnchor.constraint(greaterThanOrEqualTo: anchor, constant: offset)
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func trailingGreater(to anchor: NSLayoutXAxisAnchor, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.trailingAnchor.constraint(greaterThanOrEqualTo: anchor, constant: offset)
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func leftGreater(to anchor: NSLayoutXAxisAnchor, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.leftAnchor.constraint(greaterThanOrEqualTo: anchor, constant: offset)
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func topGreater(to anchor: NSLayoutYAxisAnchor, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.topAnchor.constraint(greaterThanOrEqualTo: anchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func rightGreater(to anchor: NSLayoutXAxisAnchor, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.rightAnchor.constraint(greaterThanOrEqualTo: anchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func bottomGreater(to anchor: NSLayoutYAxisAnchor, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.bottomAnchor.constraint(greaterThanOrEqualTo: anchor, constant: offset)
         constraint.priority = priority
         constraint.isActive = true
         return constraint
@@ -559,6 +853,42 @@ public extension UIView {
         return (centerX: centerX, centerY: centerY)
     }
 
+    // MARK: - Center less than parent's center
+
+    @discardableResult
+    func centerXLess(_ offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.centerXAnchor.constraint(lessThanOrEqualTo: self.superview!.centerXAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func centerYLess(_ offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.centerYAnchor.constraint(lessThanOrEqualTo: self.superview!.centerYAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    // MARK: - Center greater than parent's center
+
+    @discardableResult
+    func centerXGreater(_ offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.centerXAnchor.constraint(greaterThanOrEqualTo: self.superview!.centerXAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func centerYGreater(_ offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.centerYAnchor.constraint(greaterThanOrEqualTo: self.superview!.centerYAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
     // MARK: - Center to another view's center
 
     @discardableResult
@@ -583,6 +913,42 @@ public extension UIView {
         let centerY = self.centerY(to: view, offset: offset.y, priority: priority)
         return (centerX: centerX, centerY: centerY)
     }
+
+    // MARK: - Center less than another view's center
+
+    @discardableResult
+    func centerXLess(than view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.centerXAnchor.constraint(lessThanOrEqualTo: view.centerXAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func centerYLess(than view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.centerYAnchor.constraint(lessThanOrEqualTo: view.centerYAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    // MARK: - Center less than another view's center
+
+    @discardableResult
+    func centerXGreater(than view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.centerXAnchor.constraint(greaterThanOrEqualTo: view.centerXAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func centerYGreater(than view: UIView, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.centerYAnchor.constraint(greaterThanOrEqualTo: view.centerYAnchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
     
     // MARK: - Center to anchor
     
@@ -597,6 +963,42 @@ public extension UIView {
     @discardableResult
     func centerY(to anchor: NSLayoutYAxisAnchor, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
         let constraint = self.centerYAnchor.constraint(equalTo: anchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    // MARK: - Center less than anchor
+
+    @discardableResult
+    func centerXLess(than anchor: NSLayoutXAxisAnchor, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.centerXAnchor.constraint(lessThanOrEqualTo: anchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func centerYLess(than anchor: NSLayoutYAxisAnchor, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.centerYAnchor.constraint(lessThanOrEqualTo: anchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    // MARK: - Center greater than anchor
+
+    @discardableResult
+    func centerXGreater(than anchor: NSLayoutXAxisAnchor, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.centerXAnchor.constraint(greaterThanOrEqualTo: anchor, constant: offset)
+        constraint.priority = priority
+        constraint.isActive = true
+        return constraint
+    }
+
+    @discardableResult
+    func centerYGreater(than anchor: NSLayoutYAxisAnchor, offset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        let constraint = self.centerYAnchor.constraint(greaterThanOrEqualTo: anchor, constant: offset)
         constraint.priority = priority
         constraint.isActive = true
         return constraint
