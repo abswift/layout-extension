@@ -16,6 +16,7 @@
 		9A1DD8D3ABCA2C68F2F615122B724A13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		9CAC8A902ABD77834774BB48BD6F997D /* Pods-LayoutExtension_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9EB2DAD198A21E09A37201E89577AF /* Pods-LayoutExtension_Example-dummy.m */; };
 		B07FCCD422A025440018AAD1 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07FCCD222A025440018AAD1 /* UIView+Layout.swift */; };
+		B0CF5C59251EC30A00A43C97 /* NSLayoutConstraint+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF5C58251EC30A00A43C97 /* NSLayoutConstraint+Layout.swift */; };
 		F4BE3C2919063D067F4949B3EBAE952A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		98031368B759EE8F61E4645C51FF0C0F /* LayoutExtension.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = LayoutExtension.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B07FCCD222A025440018AAD1 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		B0CF5C58251EC30A00A43C97 /* NSLayoutConstraint+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Layout.swift"; sourceTree = "<group>"; };
 		B6ACEE798FA0FB5D9803AD8ED852B96C /* LayoutExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LayoutExtension-dummy.m"; sourceTree = "<group>"; };
 		B8E457D2CF42F8EAB8405A730D24E862 /* LayoutExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LayoutExtension.modulemap; sourceTree = "<group>"; };
 		BBD160D29AD8C8A4CE9BC4CB591E996C /* Pods-LayoutExtension_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LayoutExtension_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				B07FCCD222A025440018AAD1 /* UIView+Layout.swift */,
+				B0CF5C58251EC30A00A43C97 /* NSLayoutConstraint+Layout.swift */,
 			);
 			name = Classes;
 			path = LayoutExtension/Classes;
@@ -387,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B07FCCD422A025440018AAD1 /* UIView+Layout.swift in Sources */,
+				B0CF5C59251EC30A00A43C97 /* NSLayoutConstraint+Layout.swift in Sources */,
 				35DA482B9A42A55A16AEA5B1422ABA46 /* LayoutExtension-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
