@@ -39,12 +39,6 @@ If you prefer not to use any of the aforementioned dependency managers, you can 
 
 ## Usage
 
-When using the library through a dependency manager make sure to import the library like so:
-
-```swift
-import LayoutExtension
-```
-
 Basic example:
 
 ```swift
@@ -53,6 +47,12 @@ self.view.addSubview(box) { subview in
     subview.height(50)
     subview.center()
 }
+```
+
+When using the library through a dependency manager make sure to import the library like so:
+
+```swift
+import LayoutExtension
 ```
 
 ## Syntax
