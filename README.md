@@ -33,6 +33,18 @@ To install LayoutExtension through [Carthage](https://github.com/Carthage/Cartha
 github "abswift/LayoutExtension"
 ```
 
+### Swift Package Manager
+
+To install LayoutExtension through [Swift Package Manager](https://swift.org/package-manager/), add it to the `dependencies` value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .package(name: "LayoutExtension", url: "git@github.com:abswift/layout-extension.git", .upToNextMajor(from: "0.2.1"))
+]
+```
+
+Or via the `File > Swift Packages > Add Package Dependency…` menu item in Xcode.
+
 ### Manually
 
 If you prefer not to use any of the aforementioned dependency managers, you can install LayoutExtension into your project manually by downloading or cloning the files into your project.
