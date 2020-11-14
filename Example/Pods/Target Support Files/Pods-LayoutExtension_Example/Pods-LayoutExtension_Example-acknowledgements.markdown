@@ -3,6 +3,8 @@ This application makes use of the following third party libraries:
 
 ## LayoutExtension
 
+MIT License
+
 Copyright (c) 2019 Ariel Bogdziewicz <ariel.bogdziewicz@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

@@ -1,5 +1,5 @@
 PODS:
-  - LayoutExtension (0.1.0)
+  - LayoutExtension (1.0.0)
 
 DEPENDENCIES:
   - LayoutExtension (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LayoutExtension: 4d204013a90f382c374757401600da5a7f940fb1
+  LayoutExtension: bf1b0b1e25afa68ab78bb12c2e6f468eb5be24e1
 
 PODFILE CHECKSUM: 3a14a5d8a1d8041426005fe399bd4818782d2989
 
-COCOAPODS: 1.7.0
+COCOAPODS: 1.9.1
