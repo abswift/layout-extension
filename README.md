@@ -17,20 +17,39 @@ Required deployment target is iOS >= 9.0
 
 ## Installation
 
-LayoutExtension is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### CocoaPods
+
+To install LayoutExtension through [CocoaPods](https://cocoapods.org), simply add the following line to your `Podfile`:
 
 ```ruby
 pod 'LayoutExtension'
 ```
 
-## Usage
+### Carthage
 
-When using the library through [CocoaPods](https://cocoapods.org) then please import the library like follows:
+To install LayoutExtension through [Carthage](https://github.com/Carthage/Carthage), simply specify it in your `Cartfile`:
+
+```ogdl
+github "abswift/LayoutExtension"
+```
+
+### Swift Package Manager
+
+To install LayoutExtension through [Swift Package Manager](https://swift.org/package-manager/), add it to the `dependencies` value of your `Package.swift`.
 
 ```swift
-import LayoutExtension
+dependencies: [
+    .package(name: "LayoutExtension", url: "git@github.com:abswift/layout-extension.git", .upToNextMajor(from: "0.2.1"))
+]
 ```
+
+Or via the `File > Swift Packages > Add Package Dependency…` menu item in Xcode.
+
+### Manually
+
+If you prefer not to use any of the aforementioned dependency managers, you can install LayoutExtension into your project manually by downloading or cloning the files into your project.
+
+## Usage
 
 Basic example:
 
@@ -40,6 +59,12 @@ self.view.addSubview(box) { subview in
     subview.height(50)
     subview.center()
 }
+```
+
+When using the library through a dependency manager make sure to import the library like so:
+
+```swift
+import LayoutExtension
 ```
 
 ## Syntax
