@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension NSLayoutDimension {
+public extension NSLayoutDimension {
 
     // MARK: - Dimension to constant
 

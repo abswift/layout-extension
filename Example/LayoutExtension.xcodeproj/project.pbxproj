@@ -13,6 +13,9 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		B0E9FA062560979D0012128D /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E9FA052560979D0012128D /* Button.swift */; };
+		B0E9FA1E256098690012128D /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E9FA1D256098690012128D /* UIImage+Extensions.swift */; };
+		B0E9FA482560B2E80012128D /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E9FA472560B2E80012128D /* Alignment.swift */; };
 		B7710B0BED289A9F03F4E32F /* Pods_LayoutExtension_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959D0ABB7DB48C87A8CF6659 /* Pods_LayoutExtension_Tests.framework */; };
 		CB854E5EBF53A30543D72BC8 /* Pods_LayoutExtension_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F20022768C119E985F549D96 /* Pods_LayoutExtension_Example.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +48,10 @@
 		7630AA7BBA6FB2A8C5A390B3 /* LayoutExtension.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LayoutExtension.podspec; path = ../LayoutExtension.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8405B252A7684A9DC9446419 /* Pods-LayoutExtension_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LayoutExtension_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LayoutExtension_Tests/Pods-LayoutExtension_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		959D0ABB7DB48C87A8CF6659 /* Pods_LayoutExtension_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LayoutExtension_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0E9F9FC256095E20012128D /* LayoutExtension_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LayoutExtension_Example.entitlements; sourceTree = "<group>"; };
+		B0E9FA052560979D0012128D /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		B0E9FA1D256098690012128D /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		B0E9FA472560B2E80012128D /* Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alignment.swift; sourceTree = "<group>"; };
 		DB4ED511D322EF5E4F666CD2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F20022768C119E985F549D96 /* Pods_LayoutExtension_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LayoutExtension_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -81,6 +88,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				B0E9F9FC256095E20012128D /* LayoutExtension_Example.entitlements */,
 				607FACD21AFB9204008FA782 /* Example for LayoutExtension */,
 				5AFB539AD2A063D85918F1F5 /* Frameworks */,
 				F600C6366D31A2218DB97D3E /* Pods */,
@@ -102,12 +110,10 @@
 		607FACD21AFB9204008FA782 /* Example for LayoutExtension */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				B0E9FA01256096EA0012128D /* Application */,
+				B0E9FA1C256098590012128D /* Extensions */,
+				B0E9FA02256097100012128D /* MainScreen */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 			);
 			name = "Example for LayoutExtension";
 			path = LayoutExtension;
@@ -146,6 +152,35 @@
 				404BC19A6B70347A5A552163 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		B0E9FA01256096EA0012128D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		B0E9FA02256097100012128D /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B0E9FA472560B2E80012128D /* Alignment.swift */,
+				B0E9FA052560979D0012128D /* Button.swift */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+			);
+			name = MainScreen;
+			sourceTree = "<group>";
+		};
+		B0E9FA1C256098590012128D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B0E9FA1D256098690012128D /* UIImage+Extensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		F600C6366D31A2218DB97D3E /* Pods */ = {
@@ -212,6 +247,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 46FRJZHMNV;
 						LastSwiftMigration = 1020;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -330,8 +366,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E9FA482560B2E80012128D /* Alignment.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				B0E9FA062560979D0012128D /* Button.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				B0E9FA1E256098690012128D /* UIImage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,12 +520,18 @@
 			baseConfigurationReference = 6AA429960DF932E0E08D3700 /* Pods-LayoutExtension_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LayoutExtension_Example.entitlements;
+				DEVELOPMENT_TEAM = 46FRJZHMNV;
 				INFOPLIST_FILE = LayoutExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -495,12 +540,18 @@
 			baseConfigurationReference = 48A4CD0D2AFDFA3FA046CCE3 /* Pods-LayoutExtension_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LayoutExtension_Example.entitlements;
+				DEVELOPMENT_TEAM = 46FRJZHMNV;
 				INFOPLIST_FILE = LayoutExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
