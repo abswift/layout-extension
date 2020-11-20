@@ -302,8 +302,8 @@ public extension UIView {
     func fill(_ inset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> (top: NSLayoutConstraint, left: NSLayoutConstraint, bottom: NSLayoutConstraint, right: NSLayoutConstraint) {
         let top = self.top(inset, priority: priority)
         let left = self.left(inset, priority: priority)
-        let bottom = self.bottom(-inset, priority: priority)
-        let right = self.right(-inset, priority: priority)
+        let bottom = self.bottom(inset, priority: priority)
+        let right = self.right(inset, priority: priority)
         return (top: top, left: left, bottom: bottom, right: right)
     }
 
@@ -311,8 +311,8 @@ public extension UIView {
     func fill(_ insets: UIEdgeInsets, priority: UILayoutPriority = .required) -> (top: NSLayoutConstraint, left: NSLayoutConstraint, bottom: NSLayoutConstraint, right: NSLayoutConstraint) {
         let top = self.top(insets.top, priority: priority)
         let left = self.left(insets.left, priority: priority)
-        let bottom = self.bottom(-insets.bottom, priority: priority)
-        let right = self.right(-insets.right, priority: priority)
+        let bottom = self.bottom(insets.bottom, priority: priority)
+        let right = self.right(insets.right, priority: priority)
         return (top: top, left: left, bottom: bottom, right: right)
     }
 
@@ -320,8 +320,8 @@ public extension UIView {
     func fillLeadingTrailing(_ inset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> (top: NSLayoutConstraint, leading: NSLayoutConstraint, bottom: NSLayoutConstraint, trailing: NSLayoutConstraint) {
         let top = self.top(inset, priority: priority)
         let leading = self.leading(inset, priority: priority)
-        let bottom = self.bottom(-inset, priority: priority)
-        let trailing = self.trailing(-inset, priority: priority)
+        let bottom = self.bottom(inset, priority: priority)
+        let trailing = self.trailing(inset, priority: priority)
         return (top: top, leading: leading, bottom: bottom, trailing: trailing)
     }
 
@@ -329,8 +329,8 @@ public extension UIView {
     func fillLeadingTrailing(_ insets: UIEdgeInsets, priority: UILayoutPriority = .required) -> (top: NSLayoutConstraint, leading: NSLayoutConstraint, bottom: NSLayoutConstraint, trailing: NSLayoutConstraint) {
         let top = self.top(insets.top, priority: priority)
         let leading = self.leading(insets.left, priority: priority)
-        let bottom = self.bottom(-insets.bottom, priority: priority)
-        let trailing = self.trailing(-insets.right, priority: priority)
+        let bottom = self.bottom(insets.bottom, priority: priority)
+        let trailing = self.trailing(insets.right, priority: priority)
         return (top: top, leading: leading, bottom: bottom, trailing: trailing)
     }
 
@@ -426,8 +426,8 @@ public extension UIView {
     func fillSafe(_ inset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> (top: NSLayoutConstraint, left: NSLayoutConstraint, bottom: NSLayoutConstraint, right: NSLayoutConstraint) {
         let top = self.topSafe(inset, priority: priority)
         let left = self.leftSafe(inset, priority: priority)
-        let bottom = self.bottomSafe(-inset, priority: priority)
-        let right = self.rightSafe(-inset, priority: priority)
+        let bottom = self.bottomSafe(inset, priority: priority)
+        let right = self.rightSafe(inset, priority: priority)
         return (top: top, left: left, bottom: bottom, right: right)
     }
 
@@ -435,8 +435,8 @@ public extension UIView {
     func fillSafe(_ insets: UIEdgeInsets, priority: UILayoutPriority = .required) -> (top: NSLayoutConstraint, left: NSLayoutConstraint, bottom: NSLayoutConstraint, right: NSLayoutConstraint) {
         let top = self.topSafe(insets.top, priority: priority)
         let left = self.leftSafe(insets.left, priority: priority)
-        let bottom = self.bottomSafe(-insets.bottom, priority: priority)
-        let right = self.rightSafe(-insets.right, priority: priority)
+        let bottom = self.bottomSafe(insets.bottom, priority: priority)
+        let right = self.rightSafe(insets.right, priority: priority)
         return (top: top, left: left, bottom: bottom, right: right)
     }
 
@@ -444,8 +444,8 @@ public extension UIView {
     func fillLeadingTrailingSafe(_ inset: CGFloat = 0.0, priority: UILayoutPriority = .required) -> (top: NSLayoutConstraint, leading: NSLayoutConstraint, bottom: NSLayoutConstraint, trailing: NSLayoutConstraint) {
         let top = self.topSafe(inset, priority: priority)
         let leading = self.leadingSafe(inset, priority: priority)
-        let bottom = self.bottomSafe(-inset, priority: priority)
-        let trailing = self.trailingSafe(-inset, priority: priority)
+        let bottom = self.bottomSafe(inset, priority: priority)
+        let trailing = self.trailingSafe(inset, priority: priority)
         return (top: top, leading: leading, bottom: bottom, trailing: trailing)
     }
 
@@ -453,8 +453,8 @@ public extension UIView {
     func fillLeadingTrailingSafe(_ insets: UIEdgeInsets, priority: UILayoutPriority = .required) -> (top: NSLayoutConstraint, leading: NSLayoutConstraint, bottom: NSLayoutConstraint, trailing: NSLayoutConstraint) {
         let top = self.topSafe(insets.top, priority: priority)
         let leading = self.leadingSafe(insets.left, priority: priority)
-        let bottom = self.bottomSafe(-insets.bottom, priority: priority)
-        let trailing = self.trailingSafe(-insets.right, priority: priority)
+        let bottom = self.bottomSafe(insets.bottom, priority: priority)
+        let trailing = self.trailingSafe(insets.right, priority: priority)
         return (top: top, leading: leading, bottom: bottom, trailing: trailing)
     }
     

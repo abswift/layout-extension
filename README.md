@@ -39,7 +39,7 @@ To install LayoutExtension through [Swift Package Manager](https://swift.org/pac
 
 ```swift
 dependencies: [
-    .package(name: "LayoutExtension", url: "git@github.com:abswift/layout-extension.git", .upToNextMajor(from: "1.1.0"))
+    .package(name: "LayoutExtension", url: "git@github.com:abswift/layout-extension.git", .upToNextMajor(from: "1.1.1"))
 ]
 ```
 
